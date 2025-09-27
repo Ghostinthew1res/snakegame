@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Snaked</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="home" class="screen">
+    <h1>🐍 Snaked</h1>
+    <div id="highscoreArea">
+      High Score: <span id="highscore">0</span>
+    </div>
+    <div id="skinArea">
+      <label>Snake Color: <input type="color" id="snakeColor" value="#43e370"></label>
+      <label>Body Pattern: 
+        <select id="snakePattern">
+          <option value="solid">Solid</option>
+          <option value="striped">Striped</option>
+          <option value="dotted">Dotted</option>
+        </select>
+      </label>
+    </div>
+    <button id="playBtn">Play</button>
+  </div>
+
+  <div id="game" class="screen">
+    <canvas id="arena"></canvas>
+    <div id="scoreArea">Score: <span id="score">0</span></div>
+    <canvas id="minimap"></canvas>
+    <button id="restartBtn">Restart</button>
+    <div id="gameover" class="overlay" style="display:none;">
+      <h2>Game Over!</h2>
+      <p>Your score: <span id="finalScore"></span></p>
+      <button id="homeBtn">Home</button>
+    </div>
+  </div>
+  <script src="snaked.js"></script>
+</body>
+</html>
